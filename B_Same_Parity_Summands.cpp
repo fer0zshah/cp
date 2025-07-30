@@ -9,6 +9,10 @@ int main()
         long long n, k;
         cin >> n >> k;
         vector<long long> v;
+        if(k>n){
+            cout<<"NO"<<endl;
+            continue;
+        }
         if (n % 2)
         {
             if (k % 2)
