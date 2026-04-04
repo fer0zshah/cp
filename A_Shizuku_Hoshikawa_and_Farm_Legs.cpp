@@ -4,20 +4,16 @@ typedef long long LL;
  
 int main() {
 ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-int t ;
+int t;
 cin>>t;
 while(t--){
-    int n;
+    int n ;
     cin>>n;
-    vector<int>v(n);
-    int sum=0;
-    for(int i=0;i<n;i++){
-        cin>>v[i];
-        sum+=v[i];
+    if(n%2){
+        cout<<0<<endl;
+        continue;
     }
-    if(sum%3==0)cout<<1<<" "<<2<<endl;
-    else cout<<0<<" "<<0<<endl;
-    
+    cout<<n/4+1<<endl;
 }
  
  return 0; }
