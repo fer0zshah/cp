@@ -20,12 +20,11 @@
     {
       "label": "compile and run",
       "type": "shell",
-      "command": "cmd.exe",
-      "args": [
-        "/c",
-        "\"${fileBasenameNoExtension}\" < input.txt > output.txt"
-      ],
+      "command": "Get-Content \"${workspaceFolder}\\input.txt\" | & \".\\${fileBasenameNoExtension}.exe\" | Set-Content \"${workspaceFolder}\\output.txt\"",
       "dependsOn": "compile",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
       "group": {
         "kind": "build",
         "isDefault": true
